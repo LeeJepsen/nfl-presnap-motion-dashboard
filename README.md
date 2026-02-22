@@ -1,5 +1,8 @@
 # NFL Pre-Snap Motion Dashboard
 
+🚀 **Live Interactive Dashboard:**  
+https://nfl-presnap-motion-dashboard-k6e9mb5yjsbfm73tapvjms.streamlit.app/
+
 Interactive analytics dashboard built using **NFL Big Data Bowl 2025 tracking data** to explore how offensive pre-snap motion influences defensive behavior across the league.
 
 This project combines player tracking data engineering, feature construction, and interactive visualization to translate raw tracking data into interpretable insights.
