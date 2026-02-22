@@ -96,7 +96,7 @@ All feature engineering and exploratory analysis were conducted in the project n
 
 ## Dashboard Preview
 
-📄 **[View Full Dashboard Preview (PDF)](images/dashboard_snapshot.pdf)**
+📄 **[View Full Dashboard Preview (PDF)](preview/dashboard_snapshot.pdf)**
 
 ### Dashboard Functionality
 
