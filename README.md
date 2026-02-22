@@ -8,9 +8,9 @@ This project combines player tracking data engineering, feature construction, an
 
 ## Project Motivation
 
-Player tracking is the next step in sports, and being able to interpret the data from a sport science perspective (defining player load) using gps systems has been the recent standard in athlete monitoring.  Now technology has gotten to a point where we can utilize this for on field context.  So this is my entry into working with NFL player tracking data.  
+Player tracking is the next step in sports, and being able to interpret the data from a sport science perspective (defining player load) using gps systems has been the recent standard in athlete monitoring. Now technology has gotten to a point where we can utilize this for on field context. So this is my entry into working with NFL player tracking data.
 
-Going with the NFL Big Data Bowl prompt of Pre-snap motion, which has become a defining feature of modern NFL offenses, and its league-wide impact on pre-snap reads, and defensive behavior.  
+Going with the NFL Big Data Bowl prompt of Pre-snap motion, which has become a defining feature of modern NFL offenses, and its league-wide impact on pre-snap reads, and defensive behavior.
 
 This dashboard was developed to investigate:
 
@@ -42,12 +42,12 @@ Version 1.0 introduces the **League Overview dashboard**, providing an interacti
 
 ## Key Metrics
 
-| Metric | Description |
-|------|-------------|
-| **League Motion Rate** | Percentage of offensive plays using pre-snap motion |
-| **Avg Motion Distance** | Average distance traveled by the motion player (yards) |
+| Metric                        | Description                                                        |
+| ----------------------------- | ------------------------------------------------------------------ |
+| **League Motion Rate**        | Percentage of offensive plays using pre-snap motion                |
+| **Avg Motion Distance**       | Average distance traveled by the motion player (yards)             |
 | **Defensive Adjustment Rate** | Percentage of motion plays producing meaningful defensive reaction |
-| **Avg Motion Plays per Team** | Average motion volume per offense within selected weeks |
+| **Avg Motion Plays per Team** | Average motion volume per offense within selected weeks            |
 
 These metrics summarize league tendencies (weeks 1-9 in NFL's 2022 nfl season)
 
@@ -65,7 +65,7 @@ This definition was not arbitrarily selected. It was derived through exploratory
 4. Requiring movement from **multiple defenders** reduced noise from isolated player adjustments.
 5. A 1.5-yard displacement threshold consistently identified moments where defensive structure visibly changed.
 
-Together, these criteria operationalize a football concept — *defensive reaction* — into a measurable tracking-data feature.
+Together, these criteria operationalize a football concept — _defensive reaction_ — into a measurable tracking-data feature.
 
 ---
 
@@ -96,7 +96,52 @@ All feature engineering and exploratory analysis were conducted in the project n
 
 ## Dashboard Preview
 
+📄 **[View Full Dashboard Preview (PDF)](images/dashboard_snapshot.pdf)**
 
+### Dashboard Functionality
+
+The League Overview dashboard is designed as an interactive exploration tool rather than a static visualization. Key functionality includes:
+
+#### Interactive Controls
+
+- Adjustable **week range slider** allowing analysis across any subset of Weeks 1–9
+- Dynamic filtering updates all KPIs and visualizations simultaneously
+- Team comparison sorting options for multiple performance perspectives
+
+#### League Motion KPIs
+
+- League Motion Rate
+- Average Motion Distance (yards)
+- Defensive Adjustment Rate
+- Average Motion Plays per Team (bye-week aware)
+
+#### Team Comparison Visualization
+
+- Dynamic bar chart comparing offensive motion tendencies
+- Metric switching between:
+  - Motion Rate
+  - Motion Plays
+  - Total Offensive Plays
+- League-average benchmark indicator
+- Context-aware dimming for below-average teams
+- Team color branding and logo integration
+
+#### Defensive Adjustment Analysis
+
+- League-wide probability curve relating motion distance to defensive response
+- Highlighted transition threshold where defensive adjustment becomes likely
+- Static reference visualization derived from full-season aggregation
+
+#### Data Context Handling
+
+- Bye weeks accounted for through games-played normalization
+- Metrics dynamically recomputed based on selected week range
+
+#### User Experience Design
+
+- Consistent axis scaling and labeling
+- Interactive hover tooltips for detailed inspection
+- Modular layout designed for future dashboard expansion
 
 ---
 
@@ -105,3 +150,4 @@ All feature engineering and exploratory analysis were conducted in the project n
 ```bash
 pip install -r requirements.txt
 streamlit run app/app.py
+```
