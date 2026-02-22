@@ -1,5 +1,7 @@
 # NFL Pre-Snap Motion Dashboard
 
+[![Live App](https://img.shields.io/badge/Streamlit-Live%20Dashboard-red?logo=streamlit)](https:////nfl-presnap-motion-dashboard-k6e9mb5yjsbfm73tapvjms.streamlit.app/)
+
 🚀 **Live Interactive Dashboard:**  
 https://nfl-presnap-motion-dashboard-k6e9mb5yjsbfm73tapvjms.streamlit.app/
 
